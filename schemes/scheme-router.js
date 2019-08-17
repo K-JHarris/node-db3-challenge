@@ -47,7 +47,6 @@ router.get('/:id/steps', async (req, res) => {
 
 router.post('/', async (req, res) => {
   const schemeData = req.body;
-
   try {
     const scheme = await Schemes.add(schemeData);
     res.status(201).json(scheme);
